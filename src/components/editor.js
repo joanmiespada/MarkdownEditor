@@ -16,9 +16,9 @@ function FieldGroup({ id, label, help, ...props }) {
 class Editor extends Component
 {
 
-    change=()=>{
+    change=(ev)=>{
         if(this.props.update)
-            this.props.update();
+            this.props.update(ev);
         
     }
 
@@ -26,13 +26,14 @@ class Editor extends Component
     {
         return(
             <div>
-                <Panel header="Panel heading without title">                
+                <Panel header={this.props.title}>                
                     <FieldGroup
                         id={this.props.id}
                         type="textarea"
                         placeholder={this.props.text}
                         style={{height:'100px'}}
-                        onChange={(ev)=>{this.change(ev)}}
+                        //onChange={(ev)=>{this.change()}}
+                        //{this.props.readonly==="true" }
                     />
                 </Panel>
 

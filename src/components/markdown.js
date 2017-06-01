@@ -6,8 +6,8 @@ import { Button, Grid, Row, Col } from 'react-bootstrap';
 class MarkDown extends Component
 {
 
-    update = () =>{
-            console.log("ssssss")
+    update = (ev) =>{
+            console.log(ev)
     }
 
     render()
@@ -17,8 +17,8 @@ class MarkDown extends Component
                 <p>MarkDown Sample</p>
                 <Grid>
                     <Row className="show-grid">
-                        <Col md={6} mdPush={6}><Editor id="result" text="result" /></Col>
-                        <Col md={6} mdPull={6}><Editor id="origen" update={this.update} text="origen" /></Col>
+                        <Col md={6} mdPush={6}><Editor id="result" text="result" title="Result here"   /></Col>
+                        <Col md={6} mdPull={6}><Editor id="origen" update={this.update} text="origen" title="Write here"  /></Col>
                     </Row>
                 </Grid>
 

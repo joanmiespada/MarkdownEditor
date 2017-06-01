@@ -32,7 +32,7 @@ class Editor extends Component
                         type="textarea"
                         placeholder={this.props.text}
                         style={{height:'100px'}}
-                        //onChange={(ev)=>{this.change()}}
+                        onChange={(ev)=>{this.change(ev)}}
                         //{this.props.readonly==="true" }
                     />
                 </Panel>
